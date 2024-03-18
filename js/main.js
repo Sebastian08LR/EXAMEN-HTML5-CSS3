@@ -7,5 +7,7 @@ function toggleMenu(){
 
 function toggleCart(){
     var cart = document.querySelector('.cart');
-    cart.classList.toggle('active')
+    var cartAct = document.querySelector('.cartAct');
+    cartAct.classList.toggle('active');
+    cart.classList.toggle('active');
 }
