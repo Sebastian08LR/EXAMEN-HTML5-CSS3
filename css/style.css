@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    width: 100%;
+}
+
+.main-nav{
+    display: flex;
+    
+}
+.main-nav > ul{
+    display: flex;
+    list-style: none;
+    width: 90%;
+    height: 8svh;
+    text-wrap: nowrap;
+    column-gap: 2em;
+    overflow: hidden;
+    overflow-x: scroll;
+    padding-left: 2vw;
+    padding-top: 2.5em;
+    padding-bottom: 3em;
+}
+.main-nav > ul > li > a{
+    padding: 0.5svh 0.5vw;
+}
+.main-nav > ul > li > a:hover{
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+    transition: 0.3s ease;
+}
+
+.main-nav > a{
+    width: 10%;
+    height: 8svh;
+    padding-left: 2.5vw;
+    padding-top: 2.5em;
+    object-fit: contain;
+}
+
+.main-nav > a > img{
+    width: 30px;
+}
+    
+.main-nav > ul > li > a{
+    text-decoration: none;
+    color: black;
+}
+
+.main-product{
+    padding-left: 2vw;
+    width: 100%;
+    height: 92svh;
+    overflow-y: scroll;
+}
+
+.main-product > article{
+    border: 1px solid red;
+    margin-bottom: 5svh;
+    padding-top: 5svh;
+    width: 100%;
+    height: 70svh;
+    position: relative;
+    display: flex;
+}
+
+.side-gallery{
+    object-fit: contain;
+    width: 10%;
+    height: min-content;
+}
+
+.img-container{
+    width: 100%;
+    height: 15svh;
+    object-fit: contain;
+}
+
+.img-container > img{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    height: 92svh;
+}
+
+.product{
+    height: auto;
+    width: 90%;
+    display: flex;
+}
+
+.main-img{
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.main-content{
+    height: 100%;
+    width: 50%;
+    padding-right: 12vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.main-content > a{
+    text-decoration: none;
+    color: white;
+    width: max-content;
+    padding: 1svh 2vw;
+    background-color: green;
+}
+
+.main-img > img{
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width: 1000px) {
+    .main-nav{
+        display: none;    
+    }
+    .main-product > article{
+        flex-direction: column;
+        height: min-content;
+        row-gap: 1svh;
+    }
+    .side-gallery{
+        display: flex;
+        width: 100%;
+        column-gap: 1vw;
+    }
+    .product{
+        flex-direction: column;
+        width: 100%;
+    }
+    .main-img{
+        width: 100%;
+        height: 40svh;
+    }
+    .main-content{
+        width: 100%;
+        align-items: center;
+        padding: 0;
+        gap: 1svh;
+    }
+}
+    
