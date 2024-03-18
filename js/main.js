@@ -1,6 +1,11 @@
 function toggleMenu(){
     var menuToggle = document.querySelector('.toggle');
-    var navigation = document.querySelector('.navigation')
-    menuToggle.classList.toggle('active')
-    navigation.classList.toggle('active')
+    var navigation = document.querySelector('.navigation');
+    menuToggle.classList.toggle('active');
+    navigation.classList.toggle('active');
+}
+
+function toggleCart(){
+    var cart = document.querySelector('.cart');
+    cart.classList.toggle('active')
 }

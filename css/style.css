@@ -9,7 +9,14 @@ body{
     padding-right: 10vw;
     width: 100%;
 }
-
+.navigation{
+    display: none;
+    list-style: none;
+}
+.navigation > li > a{
+    text-decoration: none;
+    color: black;
+}
 .main-nav{
     display: flex;
     
@@ -37,10 +44,15 @@ body{
     transition: 0.3s ease;
 }
 
+#cart-icon{
+    display: none;
+}
+
 .main-nav > a{
+    justify-content: center;
     width: 10%;
     height: 8svh;
-    padding-left: 2.5vw;
+    padding-left: 2vw;
     padding-top: 2.5em;
     object-fit: contain;
 }
@@ -128,12 +140,27 @@ main{
 
 
 @media (max-width: 1000px) {
-    .main-nav{
-        display: none;    
+    body{
+        padding: 0;
+    }
+    section > h1{
+        font-size: 1em;
+        text-align: center;
+    }
+    #cart-icon{
+        display: block;
+        position: absolute;
+        justify-content: center;
+        top: 2svh;
+        right: 0;
+        width: 10%;
+        object-fit: contain;
     }
     .main-product > article{
+        border: none;
         flex-direction: column;
         height: min-content;
+        width: 98%;
         row-gap: 1svh;
     }
     .side-gallery{
@@ -147,7 +174,7 @@ main{
     }
     .main-img{
         width: 100%;
-        height: 40svh;
+        height: 55svh;
     }
     .main-content{
         width: 100%;
@@ -155,5 +182,50 @@ main{
         padding: 0;
         gap: 1svh;
     }
+    .toggle{
+        position: relative;
+        margin-top: 2vw;
+        margin-left: 2vw;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: url(../storage/img/menu.svg);
+        background-size: 28px;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 11;
+    }
+    
+    
+    .toggle.active{
+        position: relative;
+        background: url(../storage/img/close-menu.svg);
+        background-size: 28px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .main-nav{
+        display: none;
+    }
+    
+    .navigation.active{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 50svh;
+        overflow-y: scroll;
+        display: flex;
+        padding-top: 20svh;
+        padding-bottom: 2svh;
+        row-gap: 1.5em;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 1.2em;
+        background-color: white;
+        z-index: 10;
+    }
+    
 }
     
